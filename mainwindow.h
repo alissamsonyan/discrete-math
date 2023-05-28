@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QApplication>
+#include <QInputDialog>
+#include <QMessageBox>
 
 class MainWindow : public QMainWindow
 {
