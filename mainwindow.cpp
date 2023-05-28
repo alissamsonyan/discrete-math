@@ -15,10 +15,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::paintEvent(QPaintEvent *e) {
 
-    Q_UNUSED(e);
+  Q_UNUSED(e);
 
-    QPainter qp(this);
-    graphh(&qp);
+  QPainter qp(this);
+  graphh(&qp);
 }
 
 void MainWindow::graphh(QPainter *qp) const
@@ -42,18 +42,18 @@ void MainWindow::graphh(QPainter *qp) const
             qp->drawEllipse(100 + z, 100 + l, 20,20);
             if (j < (m - 1))
             {
-                if ((j == m - 2 || i == n - 1) && t == true) pen.setColor(QColor(120, 0, 0));
+                if ((j == m - 2 || i == n - 1) && t == true) pen.setColor(QColor(o, 0, 0));
                 else
-                    pen.setColor(QColor(121, 0, 0));
+                    pen.setColor(QColor(b, 0, 0));
                 qp->drawLine(120 + z, 100 + l, 130 + z, 100 + l);
             }
             if (i < (n - 1))
             {
                 if ((j == m - 1 || i == n - 2) && t == true)
-                    if (i == n - 2 && j == m - 2) { o--; pen.setColor(QColor(122, 0, 0)); o += 2; }
+                    if (i == n - 2 && j == m - 2) { o--; pen.setColor(QColor(o, 0, 0)); o += 2; }
                     else
-                        pen.setColor(QColor(122, 0, 0));
-                else pen.setColor(QColor(120, 0, 0));
+                        pen.setColor(QColor(o, 0, 0));
+                else pen.setColor(QColor(v, 0, 0));
                 qp->drawLine(100 + z, 120 + l, 100 + z, 130 + l);
             }
             z += 50;
