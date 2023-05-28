@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QInputDialog>
 #include <QMessageBox>
+#include <QPainter>
 
 class MainWindow : public QMainWindow
 {
