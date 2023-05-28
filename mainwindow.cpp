@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include <QPainter>
+
 
 MainWindow::MainWindow(int n, int m)
 {
