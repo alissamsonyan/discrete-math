@@ -20,31 +20,32 @@ void MainWindow::paintEvent(QPaintEvent *e) {
 
 void MainWindow::graphh(QPainter *qp) const
 {
-    int i, l = 0, z, o = 11, v = 5, b;
+    int i, l = 0, z, o = 11, v = 5;
     bool t = false;
+    if(m%2==0&&n%2==0) t=true;
 
     for (i = 0; i < n; i++)
     {
 
         z = 0;
-        b = 1;
 
         for (int j = 0; j < m; j++)
         {
-            if (i == n - 1 && j == m - 2) o--;
-            if (j % 2 == 0) b++;
 
             QPen pen(Qt::black);
             qp->setPen(pen);
             qp->drawEllipse(100 + z, 100 + l, 20, 20);
 
             if (j < (m - 1))
-            {
+            {  // o-> red
+               // b-> blue
+               // v->  green
                 QPen pen;
                 if ((j == m - 2 || i == n - 1) && t == true) {
-                     pen.setColor(Qt::green);
-                } else {
-                    pen.setColor(Qt::red);
+                     pen.setColor(Qt::red);
+                }
+                else {
+                    pen.setColor(Qt::blue);
                    }
                 qp->setPen(pen);
                 qp->drawLine(120 + z, 100 + l, 130 + z, 100 + l);
@@ -61,8 +62,9 @@ void MainWindow::graphh(QPainter *qp) const
                     }
                     else
                     {
-                       pen.setColor(Qt::green);
+                       pen.setColor(Qt::red);
                     }
+
                 }
                 else
                 {
