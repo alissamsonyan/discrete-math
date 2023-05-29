@@ -37,15 +37,13 @@ void MainWindow::graphh(QPainter *qp) const
             qp->drawEllipse(100 + z, 100 + l, 20, 20);
 
             if (j < (m - 1))
-            {  // o-> red
-               // b-> blue
-               // v->  green
+            {
                 QPen pen;
                 if ((j == m - 2 || i == n - 1) && t == true) {
-                     pen.setColor(Qt::red);
+                     pen.setColor(Qt::blue);
                 }
                 else {
-                    pen.setColor(Qt::blue);
+                    pen.setColor(Qt::red);
                    }
                 qp->setPen(pen);
                 qp->drawLine(120 + z, 100 + l, 130 + z, 100 + l);
@@ -58,11 +56,11 @@ void MainWindow::graphh(QPainter *qp) const
                 {
                     if (i == n - 2 && j == m - 2)
                     {
-                       pen.setColor(Qt::red);
+                       pen.setColor(Qt::blue);
                     }
                     else
                     {
-                       pen.setColor(Qt::red);
+                       pen.setColor(Qt::blue);
                     }
 
                 }
