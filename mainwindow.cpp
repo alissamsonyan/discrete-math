@@ -20,14 +20,14 @@ void MainWindow::paintEvent(QPaintEvent *e) {
 
 void MainWindow::graphh(QPainter *qp) const
 {
-    int i, l = 0, z, o = 11, v = 5;
+    int l = 0, z;
     bool t = false;
     if(m%2==0&&n%2==0) t=true;
 
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
 
-        z = 0;
+        z = 50;
 
         for (int j = 0; j < m; j++)
         {
@@ -46,7 +46,7 @@ void MainWindow::graphh(QPainter *qp) const
                     pen.setColor(Qt::red);
                    }
                 qp->setPen(pen);
-                qp->drawLine(120 + z, 100 + l, 130 + z, 100 + l);
+                qp->drawLine(130 + z, 110 + l, 140 + z, 110 + l);
             }
 
             if (i < (n - 1))
@@ -62,17 +62,15 @@ void MainWindow::graphh(QPainter *qp) const
                     {
                        pen.setColor(Qt::blue);
                     }
-
                 }
                 else
                 {
                     pen.setColor(Qt::green);
                 }
                 qp->setPen(pen);
-                qp->drawLine(100 + z, 120 + l, 100 + z, 130 + l);
+                qp->drawLine(110 + z, 130 + l, 110 + z, 140 + l);
             }
             z += 50;
-
         }
         l += 50;
     }
