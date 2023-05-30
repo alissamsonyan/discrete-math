@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
                            
                                                                              if (!ok) return 0;
   
-    if ((n+m % 2 == 1)  || (n+m==2) )
+    if (((n+m) % 2 == 1) || m+n==2)
     {
         QMessageBox::critical(nullptr, "Error", "Can't cover");
         return 0;
