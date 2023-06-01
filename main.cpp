@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     else
     {
         MainWindow w(m, n);
-        w.resize(m*70,n*70);
+        w.resize(m*110,n*110);
         w.show();
         return a.exec();
     }
