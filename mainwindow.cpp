@@ -21,7 +21,7 @@ void MainWindow::graphh(QPainter *qp) const
 {
     int l = 80, z;
     bool t = false;
-    double k = 0.0;
+
     double v=0.0;
 
     if (m % 2 == 0 && n % 2 == 0)
@@ -29,6 +29,7 @@ void MainWindow::graphh(QPainter *qp) const
 
     for (int i = 0; i < n; i++)
     {
+        double k = 0.0;
         z = 80;
 
         for (int j = 0; j < m; j++)
@@ -89,58 +90,5 @@ void MainWindow::graphh(QPainter *qp) const
         v+=0.5;
         l += 50;
     }
-    if (t==false){
-        int norx=110, nory=140;
 
-        for(int  i=0;i<n/2;i++) {
-
-              QPen pen;
-
-            if(i%2==0){
-                norx=110;
-                for(int j=0;j<m/2;j++){
-                    if(j%2==0){
-                       pen.setColor(Qt::red);
-                       qp->setPen(pen);
-                    qp->drawLine(norx,nory,norx+10,nory);
-                    }
-
-                else{
-                pen.setColor(Qt::cyan);
-                qp->setPen(pen);
-                qp->drawLine(norx,nory,norx+10,nory);
-                }
-                norx+=100;
-            }
-
-            }
-
-            if(i%2!=0)
-
-            {
-
-                norx=110;
-                for(int j=0;j<m/2;j++)
-                {
-                if (j%2==0){
-                pen.setColor(Qt::cyan);
-                qp->setPen(pen);
-                qp->drawLine(norx,nory,norx+10,nory);}
-                 else {
-                pen.setColor(Qt::red);
-                qp->setPen(pen);
-                qp->drawLine(norx,nory,norx+10,nory);
-                    }
-
-                norx+=100;
-                }
-
-            }
-
-         nory+=100;
-    }
-
-
-
-    }
 }
